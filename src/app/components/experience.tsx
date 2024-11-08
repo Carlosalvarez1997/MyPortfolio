@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { FaFlask, FaJs, FaPython } from 'react-icons/fa';
 import { SiFlask, SiTypescript, SiMysql, SiReact, SiSupabase } from 'react-icons/si';
 import { RiNextjsFill } from "react-icons/ri";
-import { useInView } from 'react-intersection-observer';
+
 
 // Experience Data Array
 export const experienceData = [
