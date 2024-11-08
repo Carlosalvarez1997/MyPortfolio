@@ -76,9 +76,7 @@ const Hero = () => {
             <motion.div 
               key={idx}
               className="flex items-center space-x-2 transition-all duration-100 tablet:hover:scale-150"
-              whileHover={{ scale: 1.1 }}
-              // Only scale on tablet and larger screens
-            
+              whileHover={{ scale: 1.1 }}            
             >
               <Icon className={`${color} text-2xl`} />
               <h2 className="hidden tablet:block text-xl text-black">{name}</h2>
