@@ -26,7 +26,7 @@ const MyProjects = () => {
         
       <ProjectCard 
         title="UPIN"
-        description="Upin is a user-friendly app that helps you find and manage local events while connecting with your community."
+        description="Upin is a user-friendly app that helps you find and manage local events while connecting with your community. Web Version still in Development. App can be downloaded on the Playstore for Android and AppStore for Iphone."
         hashtags="#React #NextJS"
         logoColor="#3ECF8E"
         techStack={[
