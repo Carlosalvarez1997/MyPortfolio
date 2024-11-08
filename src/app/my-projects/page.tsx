@@ -2,12 +2,14 @@
 import React from 'react'
 import Header from '../components/header'
 import { motion } from "framer-motion";
-import Image from "next/image"
+
 import upinImg from "../../../public/upinScreenshot.jpeg"
-import { FaJs } from 'react-icons/fa'
-import { SiReact,SiSupabase } from 'react-icons/si'
+import upinImg2 from "../../../public/upinImg2.jpeg"
+import {  FaJs, FaPython } from 'react-icons/fa'
+import { SiFlask, SiMysql, SiReact,SiSupabase } from 'react-icons/si'
 import { RiNextjsFill } from 'react-icons/ri'
 import ProjectCard from '../components/tweet';
+import investaJournal from "../../../public/investaJournal.jpeg"
 
 const MyProjects = () => {
   return (
@@ -35,7 +37,19 @@ const MyProjects = () => {
           { icon: RiNextjsFill, name: 'NextJS', color: '#000000' },
           { icon: SiSupabase, name:"Supabase", color: "#3ECF8E" }
         ]}
-        imageSrc={upinImg}
+        images={[upinImg, upinImg2]}
+      />
+      <ProjectCard
+      title={"InvestaJournal"}
+      description= "Designed a user-friendly investment-tracking web application, harnessing the power of Python, MySQL, Flask, HTML, and CSS. With this platform, managing your investments becomes effortless and efficient. From recording purchase dates to categorizing financial types and analyzing profit/loss data, InvestaJournal provides a comprehensive solution in one convenient interface"
+      hashtags="#Flask #MySQL #Python"
+      logoColor="#D4AF37"
+      techStack={[
+        {icon: FaPython, name:"Python", color:"text-blue-400"},
+        {icon: SiFlask, name: "Flask", color: "text-gray-700"},
+        {icon: SiMysql, name:"MySQL", color:"text-blue-500"}
+      ]}
+      images={[investaJournal]}
       />
       </motion.div>
     </div>

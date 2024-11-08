@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import OrbitingCircles from '@/components/ui/orbiting-circles';
 import { RiNextjsFill } from "react-icons/ri";
-import { FaJs, FaPython, FaNodeJs, FaFlask, FaReact } from 'react-icons/fa';
+import { FaJs, FaPython, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiFlask, SiTypescript } from 'react-icons/si';
 
 const OrbitingCircle = () => {

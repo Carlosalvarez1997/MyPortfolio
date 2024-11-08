@@ -1,10 +1,15 @@
-'use client'
-import React, { useRef, useState, useEffect } from 'react';
+"use client";
+
+import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 import { RainbowButton } from '@/components/ui/rainbow-button';
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic'; // Import dynamic from next/dynamic
 import { useRouter } from 'next/navigation';
+
+// Dynamically import Lottie with no SSR (server-side rendering)
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+
 import emailSent from '../../../public/Animation - 1730832222188.json';
 
 const ContactUs = () => {
@@ -91,10 +96,7 @@ const ContactUs = () => {
               </RainbowButton>
             </div>
           </form>
-
-     
         </motion.div>
-        
       )}
     </div>
   );

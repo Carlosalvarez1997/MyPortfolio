@@ -28,7 +28,7 @@ function Header() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const goToAbout = (e: any): void => {
+  const goToAbout = (e: { preventDefault: () => void; }): void => {
     e.preventDefault();
     router.push('/aboutme');
   };

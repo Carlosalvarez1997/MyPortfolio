@@ -4,7 +4,7 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 import "../globals.css";
 import { motion } from "framer-motion";
-import { FaFlask, FaJs, FaPython } from 'react-icons/fa';
+import {  FaJs, FaPython } from 'react-icons/fa';
 import { SiFlask, SiTypescript, SiMysql, SiReact, SiSupabase } from 'react-icons/si';
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -20,8 +20,8 @@ export const experienceData = [
   {
     year: "2023",
     dateRange: "September",
-    title: "FinJournal",
-    description: "Designed and implemented FinJournal, a finance tracking application built with Python and Flask, leveraging MySQL for efficient data management to help users track and manage investment portfolios.",
+    title: "InvestaJournal",
+    description: "Designed a user-friendly investment-tracking web application, harnessing the power of Python, MySQL, Flask, HTML, and CSS. With our platform, managing your investments becomes effortless and efficient. From recording purchase dates to categorizing financial types and analyzing profit/loss data, we provide a comprehensive solution in one convenient interface",
     techLogo: [
       { Logo: <FaPython />, name: "Python", color: "text-blue-400" },
       { Logo: <SiFlask />, name: "Flask", color: "text-gray-700" },
