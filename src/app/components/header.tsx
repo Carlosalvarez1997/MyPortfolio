@@ -4,12 +4,12 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const router = useRouter();
+
 
   // Check for screen size (is mobile or not)
   useEffect(() => {
@@ -28,10 +28,7 @@ function Header() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const goToAbout = (e: { preventDefault: () => void; }): void => {
-    e.preventDefault();
-    router.push('/aboutme');
-  };
+
 
   // Prevent menu toggle when clicking on the logo/name (only on mobile)
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -58,7 +55,8 @@ function Header() {
 
       {/* Links for Larger Screens */}
       <div className="hidden tablet:flex space-x-6">
-        <Link href="/aboutme" className="text-lg font-semibold text-black hover:text-[#0CBABA]">About</Link>
+        <Link href="/" className="text-lg font-semibold text-black hover:text-[#0CBABA]">Home</Link>
+        <Link href={'/blogs'} className="text-lg font-semibold text-black hover:text-[#0CBABA]">Blogs</Link>
         <Link href="/my-projects" className="text-lg font-semibold text-black hover:text-[#0CBABA]">Projects</Link>
         <Link href="/emailme" className="text-lg font-semibold text-black hover:text-[#0CBABA]">Send Email</Link>
       </div>
@@ -86,8 +84,8 @@ function Header() {
 
             {/* Compact Menu Links */}
             <div className="flex flex-col items-center space-y-4">
-              <motion.button onClick={goToAbout} whileHover={{ scale: 0.9 }} className="text-xl font-semibold text-black">
-                About
+              <motion.button whileHover= {{scale:0.9}} className="text-xl font-semibold text-gray-800">
+              <Link href={"/"} onClick={toggleMenu}>Home</Link>
               </motion.button>
               <motion.button whileHover={{ scale: 0.9 }} className="text-xl font-semibold text-gray-800">
                 <Link href="/my-projects" onClick={toggleMenu}>Projects</Link>

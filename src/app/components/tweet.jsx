@@ -4,7 +4,7 @@ import 'swiper/swiper-bundle.css';
 import { Pagination } from 'swiper/modules';
 
 const ProjectCard = ({ title, description, hashtags, techStack, images, logoColor }) => (
-  <div className="bg-white rounded-xl border border-gray-300 shadow-md p-4 w-full tablet:w-3/4 max-w-2xl my-5">
+  <div className="bg-white rounded-xl border border-gray-300 shadow-md p-4 w-full tablet:w-3/4 max-w-2xl my-5 hover:shadow-2xl hover:translate-y-3 hover:shadow-black">
     {/* Profile Section */}
     <div className="flex items-center space-x-4 pb-4">
       <div>

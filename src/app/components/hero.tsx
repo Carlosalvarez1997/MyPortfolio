@@ -49,40 +49,43 @@ const Hero = () => {
         </Dock>
 
         {/* Description */}
-        <div className="bg-white bg-opacity-90 p-6 rounded-3xl shadow-md border border-slate-300 text-center w-full laptop:w-3/5 max-w-4xl">
+        <div className="bg-white bg-opacity-90 p-2 rounded-3xl shadow-md border border-slate-300 text-center w-full laptop:w-3/5 max-w-4xl">
           <BoxReveal>
-          <p className="text-lg mobile:text-xl laptop:text-2xl text-black leading-relaxed">
-              Hi there! I'm Carlos Alvarez, a Junior Software Engineer with a passion for web development and solving complex problems. I specialize in <span className="text-yellow-500 font-extrabold">JavaScript</span> and <span className="text-blue-500 font-extrabold">TypeScript</span>, and I love working with frameworks like <span className="text-gray-800 font-extrabold">Next.js</span> and <span className="text-blue-600 font-extrabold">React.js</span>. These technologies help me create dynamic, user-friendly web applications with seamless performance.
-              <br />
-              In addition to front-end development, I have experience with back-end technologies such as <span className="text-green-900 font-extrabold">Python</span> and <span className="text-green-700 font-extrabold">Flask</span>, which allow me to build full-stack applications and APIs. I enjoy experimenting with various JavaScript libraries and exploring new tools to improve the development process.
-              <br />
-              I'm always eager to learn new things and challenge myself with exciting projects. Whether it's collaborating with a team or working solo, I thrive in environments where I can grow and make a meaningful impact.
-            </p>
+                <p className="text-lg mobile:text-xl text-wrap laptop:text-2xl text-black leading-relaxed">
+                     Hi, my name is Carlos Alvarez, a Junior Software Engineer passionate about web development. I specialize in <span className="text-yellow-500 font-extrabold">JavaScript</span> and <span className="text-blue-500 font-extrabold">TypeScript</span>, and work with frameworks like <span className="text-gray-800 font-extrabold">Next.js</span> and <span className="text-blue-600 font-extrabold">React.js</span> to build dynamic web applications. 
+                     <br />
+                     <br />
+
+                    I also have experience with back-end technologies like <span className="text-green-900 font-extrabold">Python</span> and <span className="text-green-700 font-extrabold">Flask</span>, enabling me to develop full-stack solutions. Always eager to learn, I enjoy tackling new challenges and working on exciting projects.
+                  </p>
 
           </BoxReveal>
         </div>
 
         {/* Technologies Dock */}
         <Dock className="flex items-center space-x-4 p-4 bg-white bg-opacity-50 rounded-full shadow-md">
-          {[
-            { Icon: FaJs, color: 'text-yellow-500', name: 'JavaScript' },
-            { Icon: SiTypescript, color: 'text-blue-600', name: 'TypeScript' },
-            { Icon: FaNodeJs, color: 'text-green-500', name: 'Node.js' },
-            { Icon: SiReact, color: 'text-blue-600', name: 'React' },
-            { Icon: RiNextjsFill, color: 'text-gray-800', name: 'NextJS' },
-            { Icon: FaPython, color: 'text-blue-400', name: 'Python' },
-            { Icon: SiFlask, color: 'text-gray-700', name: 'Flask' },
-          ].map(({ Icon, color, name }, idx) => (
-            <motion.div 
-              key={idx}
-              className="flex items-center space-x-2 transition-all duration-100 tablet:hover:scale-150"
-              whileHover={{ scale: 1.1 }}            
-            >
-              <Icon className={`${color} text-2xl`} />
-              <h2 className="hidden tablet:block text-xl text-black">{name}</h2>
-            </motion.div>
-          ))}
-        </Dock>
+  {[
+    { Icon: FaJs, color: 'text-yellow-500', name: 'JavaScript' },
+    { Icon: SiTypescript, color: 'text-blue-600', name: 'TypeScript' },
+    { Icon: FaNodeJs, color: 'text-green-500', name: 'Node.js' },
+    { Icon: SiReact, color: 'text-blue-600', name: 'React' },
+    { Icon: RiNextjsFill, color: 'text-gray-800', name: 'NextJS' },
+    { Icon: FaPython, color: 'text-blue-400', name: 'Python' },
+    { Icon: SiFlask, color: 'text-gray-700', name: 'Flask' },
+  ].map(({ Icon, color, name }, idx) => (
+    <motion.div 
+      key={idx}
+      className="flex items-center space-x-2 transition-all duration-75"
+      whileHover={{ scale: 1.3 }}  // On hover (desktop)
+      whileTap={{ scale: 1.3 }}    // On tap (mobile)
+    >
+      <Icon className={`${color} text-2xl`} />
+      <h2 className="hidden tablet:block text-xl text-black">{name}</h2>
+    </motion.div>
+  ))}
+</Dock>
+
+
       </div>
     </motion.div>
   );
