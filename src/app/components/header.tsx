@@ -87,6 +87,9 @@ function Header() {
               <motion.button whileHover= {{scale:0.9}} className="text-xl font-semibold text-gray-800">
               <Link href={"/"} onClick={toggleMenu}>Home</Link>
               </motion.button>
+              <motion.button whileHover= {{scale:0.9}} className="text-xl font-semibold text-gray-800">
+              <Link href={"/blogs"} onClick={toggleMenu}>Blogs</Link>
+              </motion.button>
               <motion.button whileHover={{ scale: 0.9 }} className="text-xl font-semibold text-gray-800">
                 <Link href="/my-projects" onClick={toggleMenu}>Projects</Link>
               </motion.button>
